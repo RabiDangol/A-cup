@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    /* background:black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+.container{
+    position: relative;
+
+}
+.tea-cup{
+    position: relative;
+    width: 260px;
+    height: 250px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: rgb(133, 130, 130);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+.handel{
+    position: absolute;
+    top:20px;
+    border-radius: 50%;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border: 20px solid #5f5c5c;
+    right: -85px;
+    height: 100px;
+    width: 150px;
+    transform: rotate(35deg);
+}
+.circle {
+    position: absolute;
+    top:-15px;
+    height: 50px;
+    width: 100%;
+    background: linear-gradient(to left, #fdfdfd, #ededed);
+    border-radius: 50%;
+    overflow: hidden;
+    border-top: 4px solid #5f5c5c;
+  }
+  .tea {
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    background: linear-gradient(to left, #eb7b1b, #ffb370);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    animation: tea-move 5s linear infinite alternate;
+  }
+  @keyframes tea-move {
+    0% {
+      transform: scale(0, 0);
+    }
+    20% {
+      transform: scale(1.1, 1.1);
+    }
+    50% {
+      transform: scale(1.2, 1.2);
+    }
+    100% {
+      transform: scale(1.1, 1.1);
+    }
+  }
+  .cup-platte {
+    position: absolute;
+    left: -100px;
+    bottom: -40px;
+    background:#efeaea;
+    box-shadow: 2px 2px 20px #f0e5e529;
+    width: 500px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: -1;
+  }
+  .cup-platte::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    bottom: 15px;
+    left: 15px;
+    right: 15px;
+    background:  #efeaea;
+    border-radius: 50%;
+    border: 2px dotted #fcaa61;
+  }
+  .cup-platte::after {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 15px;
+    left: 15px;
+    right: 30px;
+    border-radius: 50%;
+  }
